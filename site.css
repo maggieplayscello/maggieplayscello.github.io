@@ -4,6 +4,10 @@
     --chicagored: #CC0000;
     }
 
+* {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
 body{
     background-color: var(--chicagored);
 }
@@ -14,8 +18,13 @@ body{
     margin: 0 auto;
     padding: 10px;
     background-color: #ffffff;
-     }
-    
+    }
+
+.footer{
+    text-align: right;
+    font-size: 12px;
+}
+
 /* navbar */
 
 .nav-wrapper{
@@ -27,19 +36,19 @@ body{
 
 .left-side{
     display: flex;
+    margin: auto;
 }
 
 .nav-wrapper > .left-side > div {
     margin: auto;
-    padding-left: 20px;
-    font-size: 20px;
+    padding: 0px 40px;
+    font-size: 17px;
     text-transform: uppercase;
     letter-spacing: 8px;
 }
 
 .nav-link-wrapper {
     height: 30px;
-
 }
 
 .nav-link-wrapper a {
@@ -48,13 +57,10 @@ body{
 }
 
 .nav-link-wrapper a:hover {
-    color: black;
+    color: var(--chicagored);
 }
 
-.active-nav-link a {
-    color: black !important;
-}
-
+/* home */
 
 img {
     max-height: 300px;
@@ -69,4 +75,35 @@ img {
 h1{
     font-size: 50px;
     text-align: center;
+}
+
+/* reading list */
+
+.book{
+    border: thin solid black;
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+}
+
+.title{
+    font-size: 30px;
+    text-align: center;
+}
+
+.author{
+    font-style: italic;
+    font-size: 26px;
+    text-align: center;
+}
+
+.description{
+    font-size: 20px;
+    text-align: center;
+}
+
+.details{
+    font-size: 15px;
+    font-style: italic;
+    text-align: right;
 }
