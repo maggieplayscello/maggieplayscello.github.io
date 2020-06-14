@@ -1,0 +1,72 @@
+
+:root{
+    --chicagoblue: #B3DDF2;
+    --chicagored: #CC0000;
+    }
+
+body{
+    background-color: var(--chicagored);
+}
+
+.site-wrapper {
+    width: 98%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ffffff;
+     }
+    
+/* navbar */
+
+.nav-wrapper{
+    background-color: var(--chicagoblue);
+    display: flex;
+	flex-direction: row;
+    padding: 30px;
+}
+
+.left-side{
+    display: flex;
+}
+
+.nav-wrapper > .left-side > div {
+    margin: auto;
+    padding-left: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.nav-link-wrapper {
+    height: 30px;
+
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+.nav-link-wrapper a:hover {
+    color: black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
+
+img {
+    max-height: 300px;
+    margin: auto;
+    display: block;
+}
+
+.textblock {
+    font-size: 20px;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
