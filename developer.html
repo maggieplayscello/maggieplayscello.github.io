@@ -1,0 +1,267 @@
+<style>
+    .detailsTE {
+    display: none;
+}
+</style>
+
+<script type="text/JavaScript">
+function showDetailsTE() {
+		var addLeagueForm = document.getElementById('detailsTE');
+		var displaySetting = detailsTE.style.display;
+		if (displaySetting == 'none') {
+			document.getElementById('detailsTE').style.display = 'block';
+            document.getElementById('showTEDetailsBtn').innerHTML = 'Hide This Section';
+		} else {
+			document.getElementById('detailsTE').style.display = 'none';
+            document.getElementById('showTEDetailsBtn').innerHTML = 'Show This Section';
+		}
+	}
+    function showDetailsPP() {
+		var addLeagueForm = document.getElementById('detailsPP');
+		var displaySetting = detailsPP.style.display;
+		if (displaySetting == 'none') {
+			document.getElementById('detailsPP').style.display = 'block';
+            document.getElementById('showPPDetailsBtn').innerHTML = 'Hide This Section';
+		} else {
+			document.getElementById('detailsPP').style.display = 'none';
+            document.getElementById('showPPDetailsBtn').innerHTML = 'Show This Section';
+		}
+	}
+	function showDetailsCap1() {
+		var addLeagueForm = document.getElementById('detailsCap1');
+		var displaySetting = detailsCap1.style.display;
+		if (displaySetting == 'none') {
+			document.getElementById('detailsCap1').style.display = 'block';
+            document.getElementById('showDetailsCap1Btn').innerHTML = 'Hide Project Details';
+		} else {
+			document.getElementById('detailsCap1').style.display = 'none';
+            document.getElementById('showDetailsCap1Btn').innerHTML = 'Show Project Details';
+		}
+	}
+    function showDetailsCap2() {
+		var addLeagueForm = document.getElementById('detailsCap2');
+		var displaySetting = detailsCap2.style.display;
+		if (displaySetting == 'none') {
+			document.getElementById('detailsCap2').style.display = 'block';
+            document.getElementById('showDetailsCap2Btn').innerHTML = 'Hide Project Details';
+		} else {
+			document.getElementById('detailsCap2').style.display = 'none';
+            document.getElementById('showDetailsCap2Btn').innerHTML = 'Show Project Details';
+		}
+	}
+    function showDetailsCap3() {
+		var addLeagueForm = document.getElementById('detailsCap3');
+		var displaySetting = detailsCap3.style.display;
+		if (displaySetting == 'none') {
+			document.getElementById('detailsCap3').style.display = 'block';
+            document.getElementById('showDetailsCap3Btn').innerHTML = 'Hide Project Details';
+		} else {
+			document.getElementById('detailsCap3').style.display = 'none';
+            document.getElementById('showDetailsCap3Btn').innerHTML = 'Show Project Details';
+		}
+	}
+    function showDetailsCap4() {
+		var addLeagueForm = document.getElementById('detailsCap4');
+		var displaySetting = detailsCap4.style.display;
+		if (displaySetting == 'none') {
+			document.getElementById('detailsCap4').style.display = 'block';
+            document.getElementById('showDetailsCap4Btn').innerHTML = 'Hide Project Details';
+		} else {
+			document.getElementById('detailsCap4').style.display = 'none';
+            document.getElementById('showDetailsCap4Btn').innerHTML = 'Show Project Details';
+		}
+	}
+</script>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="site.css">
+</head>
+
+<body>
+    <div class="site-wrapper">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="cellist.html">Cellist</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="librarian.html">Librarian</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="educator.html">Educator</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="developer.html">Developer</a>
+                </div>
+            </div>
+        </div>
+
+        <h1>Projects</h1>
+        <div class="textblock">
+            <p>As a student at Tech Elevator, we completed several capstones projects as part of a team. Since graduating, I have
+                been working on a few of my own to to solidify the full-stack skills and to continue learning.
+            </p>
+        </div>
+        <hr>
+
+        <h2>Tech Elevator Capstones</h2>
+        <button type="button" class="btn btn-primary" id="showTEDetailsBtn" onclick="showDetailsTE()">Hide This Section</button>
+        <div id="detailsTE">
+
+        <h3>Capstone 1: Vending Machine CLI Program</h3> 
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/te-external-repo/tree/master/module-1-capstone-team7/19_Capstone/java">
+            View Code in GitHub</a>
+        <div class="textblock">
+            <p> Completed in partnership with <a target="_blank" rel="noopener noreferrer" href="https://github.com/andorrafields">Andorra Fields</a>.</p>
+        </div>
+        <button type="button" class="btn btn-primary" id="showDetailsCap1Btn" onclick="showDetailsCap1()">Hide Project Details</button>
+        <div id="detailsCap1">
+            <ul>
+                <li>Reads in an initial inventory CSV file.</li>
+                <li>CLI displays an initial menu of items, their price, and quantity.</li>
+                <li>Allows a user to deposit money and keeps a running total as they make purchases or additional deposits.</li>
+                <li>Updates the quantity remaining of an item after purchase; once it is sold out it will replace the name with 
+                    the "SOLD OUT" message and will not allow you to purchase more.</li>
+                <li>User can cash out and exit; the system will inform user of the amount of refund and break down change into 
+                    logical coin values for fewest coins.
+                <li>Outputs a purchase log with timestamps.</li>
+            </ul>
+        </div>
+
+        <h3>Capstone 2: National Parks Campsite Registration</h3>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/te-external-repo/tree/master/module2-week2-capstone-team5/09_Capstone/java">
+            View Code in GitHub</a>
+        <div class="textblock">
+            <p> Completed in partnership with <a target="_blank" rel="noopener noreferrer" href="https://github.com/venke12">Kevin Ventura</a>.</p>
+            </div>
+            <button type="button" class="btn btn-primary" id="showDetailsCap2Btn" onclick="showDetailsCap2()">Hide Project Details</button>
+            <div id="detailsCap2">
+                <ul>
+                    <li>Connects to a a SQL relational database using JDBC.</li>
+                    <li>CLI displays an initial menu of three national park options.</li>
+                    <li>Upon selection, formatted information about the park, drawn from the database, is displayed, along with a 
+                        followup menu to allow a user to either view that park's campgrounds, search for a reservation, or exit to 
+                        main menu.</li>
+                    <li>View Campgrounds will display relevant info and offer an option to make a reservation.</li>
+                    <li>Reservations can only be made during a park's open season and cannot overlap an existing reservation -- 
+                        an appropriate message and redirect option will display.</li>
+                    <li>If a reservation is available for a user's selected dates, up to five available campsites will be displayed, 
+                        along with their details and the total cost of the full stay.</li>
+                    <li>Upon entering a reservation name, a confirmation message will appear with a confirmation number.</li>
+                </ul> 
+            </div>
+
+            <h3>Capstone 3: National Parks "Park Geek" Web Application</h3>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/te-external-repo/tree/master/mod3-cap-t1/12-Capstone">
+                View Code in GitHub</a>
+            <div class="textblock">
+                <p> Completed in partnership with <a target="_blank" rel="noopener noreferrer" href="https://github.com/Smikal75">S. Michael Robinson</a>.</p>
+            </div>
+            <button type="button" class="btn btn-primary" id="showDetailsCap3Btn" onclick="showDetailsCap3()">Hide Project Details</button>
+            <div id="detailsCap3">
+                    <ul>
+                        <li>Connects to a a SQL relational database (3 tables) using JDBC.</li>
+                        <li>Uses Spring MVC framework to create a functional web app.</li>
+                        <li>JSPs (5, plus header) use HTML and EL. Also implements a site-wide header and CSS.</li>
+                        <li>Home page displays a list of parks with images and short descriptions.</li>
+                        <li>Clicking on a park will display additional information, including a 5 day weather forecast along with 
+                            logical advice about how to dress and pack based on the predicted weather.
+                        <li>Weather can be displayed in either Fahrenheit or Celcius, and a user's preference will stay in effect as 
+                            they navigate between park pages and displays in the header.</li>
+                        <li>There is a survey page which takes basic user information, including their email address and favorite park. 
+                        <li>A duplicate email submission results in a "Try again" page. An obviously invalid email will result in a "Please 
+                            enter a valid email address" message.</li>
+                        <li>Once a park has at least one vote, it will appear on the "Top Parks" page with its vote total.</li>
+                    </ul> 
+                </div>
+
+            <h3>Capstone 4: "Golf Tracker" App</h3>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/te-final-capstone">
+                View Code in GitHub</a>
+            <div class="textblock">
+                <p> Completed entirely remotely in a team with 
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rschudlich">Ryan Schudlich</a>,
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/venke12"> Kevin Ventura</a>, and
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/normrothwell"> Norm Rothwell</a>.</p>
+            </div>
+            <button type="button" class="btn btn-primary" id="showDetailsCap4Btn" onclick="showDetailsCap4()">Hide Project Details</button>
+            <div id="detailsCap4">
+                    <ul>
+                        <li>Completed entirely remotely in less than two weeks by a four-person team in an Agile environment with a product owner, scrum master, 
+                            and daily standups.</li>
+                        <li>Connects to a team-designed relational database (9 tables).</li> 
+                        <li>Uses Spring MVC framework to create a functional web app.</li>
+                        <li>JSPs (22, plus header and footer) use HTML, EL, JS, local CSS, and Bootstrap. Also implements a site-wide header and footer and a 
+                            site.CSS.</li>
+                        <li>Designed wireframes, selected a color scheme and designed a logo. Used CSS and Bootstrap to accomplish design elements.</li>
+                        <li>Unlogged-in users can use the course search, which includes a weather widget and a map of all courses matching search results.</li>
+                        <li>Courses can be searched by name, city, and with full or partial words.</li>
+                        <li>New users can register an account.</li>
+                        <li>Existing users can also change their password.</li>
+                        <li>Three tiers of privileges: golfer, league admin, and site admin.</li>
+                        <li>All users can log personal scores and schedule tee times.</li>
+                        <li>Tee times that are upcoming display in the dashboard with all relevant info. Scheduling a new tee time will display all courses in 
+                            database, dates for three weeks out, and available times (crosschecked with existing reservations).</li>
+                        <li>Tee time scheduler will display a warning when a user already has a tee time on their selected day.</li>
+                        <li>Scores only require the course, par, and date. Par is an incrementer initially set at 72. Date is a bootstrap datepicker that will 
+                            not allow future dates to be selected.</li>
+                        <li>Once a user has at least 5 scores saved, a handicap will be auto-generated.</li>
+                        <li>Users who are part of a league will have access to information about that league, including their own ranking and score, and to the 
+                            roster of teams and list of team members.</li>
+                        <li>League admins can create new leagues and add players to any existing league. They can also record match information.</li>
+                        <li>Dashboard and My Leagues pages automatically update any newly entered data. My Leagues also allows a user to toggle in-page among 
+                            leagues in which they are a member.</li>
+                    </ul>
+                </div>
+            </div>
+
+        <br><br><hr>
+
+        <h2>Personal Projects</h2>
+        <button type="button" class="btn btn-primary" id="showPPDetailsBtn" onclick="showDetailsPP()">Hide This Section</button>
+        <div id="detailsPP">
+  
+            <h3>Simple CLI Math Game</h3> 
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/math-project">View Code in GitHub</a>
+            <ul>
+                <li>Generates an addition problem with two random numbers between 0 and 100.</li>
+                <li>If you input a correct answer, it will generate a new one.</li>
+                <li>If you input an incorrect answer, you will be prompted to try again.</li>
+            </ul>
+
+            <h3>Orchestra Library Web App</h3> 
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/library-project">View Code in GitHub</a>
+            <ul>
+                <li>Connects to a a SQL relational database using JDBC.</li>
+                <li>Uses Spring MVC framework to create a functional web app.</li>
+                <li>JSPs (9, plus header) use HTML and EL. Also implements a site-wide header and CSS.</li>
+                <li>Displays a full listing of the library catalogue, pulled from the database.</li>
+                <li>Pieces displayed on the listings can be clicked, taking the user to a page with additional information.</li>
+                <li>The search page allows user to search any fields present in the database with a full or partial value.</li>
+                <li>Allows the user to add a new piece to the catalogue.</li>
+            </ul>
+
+            <h3>Book Club Website</h3>
+            <a target="_blank" rel="noopener noreferrer" href="bookclub.html">Link to Website</a><br>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/maggieplayscello.github.io">View Code in GitHub</a>
+
+
+        </div>
+    <br><br><hr>
+            
+        <!-- footer and end tags-->
+    <br><br><br>
+    <div class="footer">
+        <p>Site by <a href="index.html">Maggie Thompson</a>, 2020</p>
+    </div>
+
+</div>
+</body>
+</html>
