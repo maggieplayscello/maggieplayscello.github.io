@@ -2,6 +2,8 @@
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
+/* navbar */
+
 .nav-wrapper {
     background-color: black;
     display: flex;
@@ -84,6 +86,127 @@ img {
     height: 300px;
 }
 
+/* home */
+
+#home-block {
+    font-size: 18px;
+    margin: 5%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "h-img1 hp1 hp1"
+        "hp2 hp2 h-img2";
+}
+
+#home-img1 {
+    height: 350px;
+    grid-area: h-img1;
+}
+
+#home-img2 {
+    height: 350px;
+    grid-area: h-img2;
+}
+
+#hp1 {
+    grid-area: hp1;
+}
+
+#hp2 {
+    grid-area: hp2;
+}
+
+/* cellist */
+
+#cellist-block {
+    font-size: 18px;
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "c-img1 cp1 cp1"
+        "cp2 cp2 c-img2"
+        "c-img3 cp3 cp3";
+}
+
+#cp1 {
+    grid-area: cp1;
+}
+
+#cp2 {
+    grid-area: cp2;
+}
+
+#cp3 {
+    grid-area: cp3;
+}
+
+#cello-img1 {
+    height: 350px;
+    grid-area: c-img1;
+}
+
+#cello-img2 {
+    height: 350px;
+    grid-area: c-img2;
+}
+
+#caption {
+    font-size: 16px;
+    width: 400px;
+    font-style: italic;
+}
+
+
+/* librarian */
+
+#librarian-block {
+    font-size: 18px;
+    margin: 5%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "img1 lp1 lp1"
+        "lp2 lp2 img2"
+        "img3 lp3 lp3";
+}
+
+#lp1 {
+    grid-area: lp1;
+}
+
+#lp2 {
+    grid-area: lp2;
+}
+
+#lp3 {
+    grid-area: lp3;
+}
+
+#library-img1 {
+    height: 350px;
+    grid-area: img1;
+}
+
+#library-img2 {
+    height: 350px;
+    grid-area: img2;
+}
+
+#library-img3 {
+    height: 350px;
+    grid-area: img3;
+}
+
+#caption {
+    font-size: 16px;
+    width: 400px;
+    font-style: italic;
+}
+
+
 /* educator */
 
 .educator-block {
@@ -93,26 +216,25 @@ img {
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-        "p1 p1 p1"
-        "img p2 p2";
+        "ep1 ep1 ep1"
+        "e-img ep2 ep2";
 }
 
-#p1 {
-    grid-area: p1;
+#ep1 {
+    grid-area: ep1;
 }
 
-#p2 {
-    grid-area: p2;
+#ep2 {
+    grid-area: ep2;
 }
 
 #educator-img {
     height: 350px;
-    grid-area: img;
+    grid-area: e-img;
 }
 
-#educator-img > p {
+#caption {
     font-size: 16px;
     width: 350px;
     font-style: italic;
-    grid-area: caption;
 }
