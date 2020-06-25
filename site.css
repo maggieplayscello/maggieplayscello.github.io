@@ -153,7 +153,7 @@ img {
 }
 
 #caption {
-    font-size: 16px;
+    font-size: 12px;
     width: 400px;
     font-style: italic;
 }
@@ -165,12 +165,12 @@ img {
     font-size: 18px;
     margin: 5%;
     display: grid;
-    grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
         "img1 lp1 lp1"
         "lp2 lp2 img2"
-        "img3 lp3 lp3";
+        "img3 lp3 lp3"
+        "lp4 lp4 lp4";
 }
 
 #lp1 {
@@ -183,6 +183,10 @@ img {
 
 #lp3 {
     grid-area: lp3;
+}
+
+#lp4 {
+    grid-area: lp4;
 }
 
 #library-img1 {
@@ -201,7 +205,7 @@ img {
 }
 
 #caption {
-    font-size: 16px;
+    font-size: 12px;
     width: 400px;
     font-style: italic;
 }
@@ -213,7 +217,6 @@ img {
     font-size: 18px;
     margin: 5%;
     display: grid;
-    grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
         "ep1 ep1 ep1"
@@ -234,7 +237,7 @@ img {
 }
 
 #caption {
-    font-size: 16px;
+    font-size: 12px;
     width: 350px;
     font-style: italic;
 }
