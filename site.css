@@ -2,14 +2,14 @@
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-.nav-wrapper{
+.nav-wrapper {
     background-color: black;
     display: flex;
 	flex-direction: row;
     padding: 30px;
 }
 
-.left-side{
+.left-side {
     display: flex;
     margin: auto;
 }
@@ -35,29 +35,29 @@
     color: white;
 }
 
-.footer{
+.footer {
     text-align: right;
     font-size: 12px;
     margin-right: 10%;
 }
 
-h1{
+h1 {
     font-size: 50px;
     text-align: center;
     font-variant: small-caps;
 }
 
-h2{
+h2 {
     font-size: 30px;
     text-align: center;
     font-variant: small-caps;
 }
 
-h3{
+h3 {
     font-size: 25px;
 }
 
-.textblock{
+.textblock {
     font-size: 18px;
     margin: 50px;
 }
@@ -82,4 +82,37 @@ a:hover {
 
 img {
     height: 300px;
+}
+
+/* educator */
+
+.educator-block {
+    font-size: 18px;
+    margin: 5%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "p1 p1 p1"
+        "img p2 p2";
+}
+
+#p1 {
+    grid-area: p1;
+}
+
+#p2 {
+    grid-area: p2;
+}
+
+#educator-img {
+    height: 350px;
+    grid-area: img;
+}
+
+#educator-img > p {
+    font-size: 16px;
+    width: 350px;
+    font-style: italic;
+    grid-area: caption;
 }
