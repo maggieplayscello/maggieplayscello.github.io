@@ -2,6 +2,10 @@
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
+hr {
+    background-color: #AF9164;
+}
+
 /* navbar */
 
 .nav-wrapper {
@@ -70,6 +74,10 @@ button {
     border-radius: 25px;
     height: 25px;
     border: none !important;
+}
+
+button:hover {
+    background-color: #AF9164;
 }
 
 a {
@@ -240,4 +248,11 @@ img {
     font-size: 12px;
     width: 350px;
     font-style: italic;
+}
+
+/* developer */
+
+#detailsCap4 > img {
+    margin: 5px 20px;
+    height: 400px;
 }

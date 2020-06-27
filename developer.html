@@ -1,5 +1,20 @@
 <style>
-    .detailsTE {
+#detailsTE {
+    display: none;
+}
+#detailsPP {
+    display: none;
+}
+#detailsCap1 {
+    display: none;
+}
+#detailsCap2 {
+    display: none;
+}
+#detailsCap3 {
+    display: none;
+}
+#detailsCap4 {
     display: none;
 }
 </style>
@@ -112,7 +127,7 @@ function showDetailsTE() {
         <hr>
 
         <h2>Tech Elevator Capstones</h2>
-        <button type="button" class="btn btn-primary" id="showTEDetailsBtn" onclick="showDetailsTE()">Hide This Section</button>
+        <button type="button" class="btn btn-primary" id="showTEDetailsBtn" onclick="showDetailsTE()">Show This Section</button>
         <div id="detailsTE">
 
         <h3>Capstone 1: Vending Machine CLI Program</h3> 
@@ -120,7 +135,7 @@ function showDetailsTE() {
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/te-external-repo/tree/master/module-1-capstone-team7/19_Capstone/java">
                 View Code in GitHub</a>
             <p>Completed in partnership with <a target="_blank" rel="noopener noreferrer" href="https://github.com/andorrafields">Andorra Fields</a>.</p>        
-            <button type="button" class="btn btn-primary" id="showDetailsCap1Btn" onclick="showDetailsCap1()">Hide Project Details</button>
+            <button type="button" class="btn btn-primary" id="showDetailsCap1Btn" onclick="showDetailsCap1()">Show Project Details</button>
             <div id="detailsCap1">
                 <ul>
                     <li>Reads in an initial inventory CSV file.</li>
@@ -134,13 +149,13 @@ function showDetailsTE() {
                 </ul>
             </div>
         </div>
-
+        <hr>
         <h3>Capstone 2: National Parks Campsite Registration</h3>
         <div class="textblock">
            <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/te-external-repo/tree/master/module2-week2-capstone-team5/09_Capstone/java">
             View Code in GitHub</a>
             <p> Completed in partnership with <a target="_blank" rel="noopener noreferrer" href="https://github.com/venke12">Kevin Ventura</a>.</p>
-            <button type="button" class="btn btn-primary" id="showDetailsCap2Btn" onclick="showDetailsCap2()">Hide Project Details</button>
+            <button type="button" class="btn btn-primary" id="showDetailsCap2Btn" onclick="showDetailsCap2()">Show Project Details</button>
             <div id="detailsCap2">
                 <ul>
                     <li>Connects to a a SQL relational database using JDBC.</li>
@@ -157,13 +172,13 @@ function showDetailsTE() {
                 </ul> 
             </div>
         </div>
-
+        <hr>
             <h3>Capstone 3: National Parks "Park Geek" Web Application</h3>
             <div class="textblock">
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/te-external-repo/tree/master/mod3-cap-t1/12-Capstone">
                 View Code in GitHub</a>
                 <p> Completed in partnership with <a target="_blank" rel="noopener noreferrer" href="https://github.com/Smikal75">S. Michael Robinson</a>.</p>
-                <button type="button" class="btn btn-primary" id="showDetailsCap3Btn" onclick="showDetailsCap3()">Hide Project Details</button>
+                <button type="button" class="btn btn-primary" id="showDetailsCap3Btn" onclick="showDetailsCap3()">Show Project Details</button>
                 <div id="detailsCap3">
                     <ul>
                         <li>Connects to a a SQL relational database (3 tables) using JDBC.</li>
@@ -181,7 +196,7 @@ function showDetailsTE() {
                     </ul> 
                 </div>
             </div>
-
+        <hr>
             <h3>Capstone 4: "Golf Tracker" App</h3>
             <div class="textblock">
                <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/te-final-capstone">
@@ -190,11 +205,15 @@ function showDetailsTE() {
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/rschudlich">Ryan Schudlich</a>,
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/venke12"> Kevin Ventura</a>, and
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/normrothwell"> Norm Rothwell</a>.</p>
-                <button type="button" class="btn btn-primary" id="showDetailsCap4Btn" onclick="showDetailsCap4()">Hide Project Details</button>
+                <button type="button" class="btn btn-primary" id="showDetailsCap4Btn" onclick="showDetailsCap4()">Show Project Details</button>
                 <div id="detailsCap4">
+                    <img src="img/golfwf.png">
+                    <img src="img/golfactual.png">
+                    <p><em>My original wireframe design for the My Leagues page, alongside its finalized version.</em></p>
                     <ul>
                         <li>Completed entirely remotely in less than two weeks by a four-person team in an Agile environment with a product owner, scrum master, 
                             and daily standups.</li>
+                        <li>Team used Zoom calls, Ryver messaging, and an Asana board to communicate and coordinate.</li>
                         <li>Connects to a team-designed relational database (9 tables).</li> 
                         <li>Uses Spring MVC framework to create a functional web app.</li>
                         <li>JSPs (22, plus header and footer) use HTML, EL, JS, local CSS, and Bootstrap. Also implements a site-wide header and footer and a 
@@ -222,42 +241,48 @@ function showDetailsTE() {
             </div>
         </div>
 
-        <br><br><hr>
+        <br><br>
+        <hr style="height:2px;">
 
         <h2>Personal Projects</h2>
-        <button type="button" class="btn btn-primary" id="showPPDetailsBtn" onclick="showDetailsPP()">Hide This Section</button>
+        <button type="button" class="btn btn-primary" id="showPPDetailsBtn" onclick="showDetailsPP()">Show This Section</button>
         <div id="detailsPP">
-  
+
             <h3>Simple CLI Math Game</h3> 
-            <img src="img/mathcli.png" alt="Would you like to do a math problem? Enter Y for Yes. y 61+29=90 That's correct! Here's another: 
-            91+54=13 That is incorrect. Guess again: 145 That's correct! Here's another: 55+81=w To quit, enter Q. If you'd like another 
-            math question, enter any other character. q Ok, goodbye!"><br><br>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/math-project">View Code in GitHub</a>
-            <ul>
-                <li>Generates an addition problem with two random numbers between 0 and 100.</li>
-                <li>If you input a correct answer, it will generate a new one.</li>
-                <li>If you input an incorrect answer, you will be prompted to try again until you answer correctly.</li>
-                <li>If you enter a non-numeric value, you will be asked if you would like to quit or continue.</li>
-            </ul>
-
+                <div class="textblock">
+                <img src="img/mathcli.png" alt="Would you like to do a math problem? Enter Y for Yes. y 61+29=90 That's correct! Here's another: 
+                91+54=13 That is incorrect. Guess again: 145 That's correct! Here's another: 55+81=w To quit, enter Q. If you'd like another 
+                math question, enter any other character. q Ok, goodbye!"><br><br> 
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/math-project">View Code in GitHub</a>
+                <ul>
+                    <li>Generates an addition problem with two random numbers between 0 and 100.</li>
+                    <li>If you input a correct answer, it will generate a new one.</li>
+                    <li>If you input an incorrect answer, you will be prompted to try again until you answer correctly.</li>
+                    <li>If you enter a non-numeric value, you will be asked if you would like to quit or continue.</li>
+                </ul>
+            </div>
+        <hr>
             <h3>Orchestra Library Web App</h3> 
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/library-project">View Code in GitHub</a>
-            <ul>
-                <li>Connects to a a SQL relational database using JDBC.</li>
-                <li>Uses Spring MVC framework to create a functional web app.</li>
-                <li>JSPs (9, plus header) use HTML and EL. Also implements a site-wide header and CSS.</li>
-                <li>Displays a full listing of the library catalogue, pulled from the database.</li>
-                <li>Pieces displayed on the listings can be clicked, taking the user to a page with additional information.</li>
-                <li>The search page allows user to search any fields present in the database with a full or partial value.</li>
-                <li>Allows the user to add a new piece to the catalogue.</li>
-            </ul>
-
+                <div class="textblock">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/library-project">View Code in GitHub</a>
+                <ul>
+                    <li>Connects to a a SQL relational database using JDBC.</li>
+                    <li>Uses Spring MVC framework to create a functional web app.</li>
+                    <li>JSPs use HTML, CSS, and EL. Implements a site-wide header and footer.</li>
+                    <li>Displays a full listing of the library catalogue, pulled from the database.</li>
+                    <li>Pieces displayed on the listing can be clicked, taking the user to a page with additional information.</li>
+                    <li>The search page allows user to search any fields present in the database with a full or partial value.</li>
+                    <li>Allows the user to add a new piece to the catalogue.</li>
+                </ul>
+            </div>
+        <hr>
             <h3>Book Club Website</h3>
-            <a target="_blank" rel="noopener noreferrer" href="bookclub.html">Link to Website</a><br>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/maggieplayscello.github.io">View Code in GitHub</a>
-            <p>Website in progress, being created for a friend to use for his book club.</p>
-            <img src ="img/bookclubhome.png">
-
+                <div class="textblock">
+                <a target="_blank" rel="noopener noreferrer" href="bookclub.html">Link to Website</a><br>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/maggieplayscello/maggieplayscello.github.io">View Code in GitHub</a>
+                <img src ="img/bookclubhome.png">
+                <p>Website in progress, being created for a friend to use for his book club.</p>
+            </div>
         </div>
     <br><br><hr>
             
