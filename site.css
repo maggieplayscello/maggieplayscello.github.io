@@ -2,13 +2,57 @@
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-hr {
-    background-color: #AF9164;
-}
 
 .site-wrapper {
     max-height: 98%;
     max-width: 90%;
+}
+
+img {
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.left {
+    float: left;
+    padding: 0 2% 2% 0;
+}
+
+.right {
+    float: right;
+    padding: 0 0 2% 2%;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.textblock {
+    font-size: 18px;
+    margin: 50px;
+}
+
+#caption {
+    width: 350px;
+    font-size: 13px;
+    font-style: italic;
+    padding: 0 1%;
+}
+
+hr {
+    background-color: #AF9164;
 }
 
 /* navbar */
@@ -43,33 +87,6 @@ hr {
     color: white;
 }
 
-.footer {
-    text-align: right;
-    font-size: 12px;
-    margin-right: 10%;
-}
-
-h1 {
-    font-size: 50px;
-    text-align: center;
-    font-variant: small-caps;
-}
-
-h2 {
-    font-size: 30px;
-    text-align: center;
-    font-variant: small-caps;
-}
-
-h3 {
-    font-size: 25px;
-}
-
-.textblock {
-    font-size: 18px;
-    margin: 50px;
-}
-
 button {
     background-color: black;
     color: white;
@@ -92,49 +109,22 @@ a:hover {
     text-decoration: none;
 }
 
-img {
-    max-height: 400px;
-    max-width: 400px;
-}
-
-.left {
-    float: left;
-    padding: 0 2% 2% 0;
-}
-
-.right {
-    float: right;
-    padding: 0 0 2% 2%;
-}
-
 /* home */
 
 #home-block {
     width: 100%;
     font-size: 18px;
     margin: 5%;
-    display: grid;
-    grid-gap: 5%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-        "h-img1 hp1 hp1"
-        "hp2 hp2 h-img2";
-}
-
-#home-img {
-    grid-area: h-img1;
-}
-
-#home-img2 {
-    grid-area: h-img2;
+    display: flex;
+    flex-direction: column;
 }
 
 #hp1 {
-    grid-area: hp1;
+    display: inline-block;
 }
 
 #hp2 {
-    grid-area: hp2;
+    display: inline-block;
 }
 
 /* cellist */
@@ -142,34 +132,20 @@ img {
 #cellist-block {
     font-size: 18px;
     margin: 5%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5%;
-    grid-template-areas:
-        "cp1 cp1 cp1"
-        "cp2 cp2 cp2"
-        "cp3 cp3 cp3";
+    display: flex;
+    flex-direction: column;
 }
 
 #cp1 {
-    grid-area: cp1;
     display: inline-block;
 }
 
 #cp2 {
-    grid-area: cp2;
     display: inline-block;
 }
 
 #cp3 {
-    grid-area: cp3;
     text-align: center;
-}
-
-#caption {
-    font-size: 12px;
-    font-style: italic;
-    padding: 1%;
 }
 
 
@@ -178,73 +154,33 @@ img {
 #librarian-block {
     font-size: 18px;
     margin: 5%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5%;
-    grid-template-areas:
-        "img1 lp1 lp1"
-        "lp2 lp2 img2"
-        "img3 lp3 lp3"
-        "lp4 lp4 lp4";
+    display: flex;
+    flex-direction: column;
 }
 
 #lp1 {
-    grid-area: lp1;
+    display: inline-block;
 }
 
 #lp2 {
-    grid-area: lp2;
+    display: inline-block;
 }
 
 #lp3 {
-    grid-area: lp3;
+    display: inline-block;
 }
-
-#lp4 {
-    grid-area: lp4;
-}
-
-#library-img1 {
-    height: 350px;
-    grid-area: img1;
-}
-
-#library-img2 {
-    height: 350px;
-    grid-area: img2;
-}
-
-#library-img3 {
-    height: 350px;
-    grid-area: img3;
-}
-
-#caption {
-    font-size: 12px;
-    width: 400px;
-    font-style: italic;
-}
-
 
 /* educator */
 
 .educator-block {
     font-size: 18px;
     margin: 5%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5%;
-    grid-template-areas:
-        "ep1 ep1 ep1"
-        "e-img ep2 ep2";
-}
-
-#ep1 {
-    grid-area: ep1;
+    display: flex;
+    flex-direction: column;
 }
 
 #ep2 {
-    grid-area: ep2;
+    display: inline-block;
 }
 
 #educator-img {
@@ -252,15 +188,14 @@ img {
     grid-area: e-img;
 }
 
-#caption {
-    font-size: 12px;
-    width: 350px;
-    font-style: italic;
-}
-
 /* developer */
 
-#detailsCap4 > img {
-    margin: 5px 20px;
-    height: 400px;
+
+
+/* footer */
+
+.footer {
+    text-align: right;
+    font-size: 12px;
+    margin-right: 10%;
 }
