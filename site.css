@@ -6,30 +6,32 @@ hr {
     background-color: #AF9164;
 }
 
+.site-wrapper {
+    max-height: 98%;
+    max-width: 90%;
+}
+
 /* navbar */
 
 .nav-wrapper {
     background-color: black;
-    display: flex;
-	flex-direction: row;
-    padding: 30px;
+    display: inline-block;
+    padding: 3%;
+    width: 100%;
+    margin: 3%;
+    text-align: justify;
 }
 
-.left-side {
+.nav-links {
     display: flex;
-    margin: auto;
-}
-
-.nav-wrapper > .left-side > div {
-    margin: auto;
-    padding: 0px 40px;
-    font-size: 17px;
-    text-transform: uppercase;
-    letter-spacing: 8px;
 }
 
 .nav-link-wrapper {
     height: 30px;
+    margin: auto;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3%;
 }
 
 .nav-link-wrapper a {
@@ -91,29 +93,39 @@ a:hover {
 }
 
 img {
-    height: 300px;
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.left {
+    float: left;
+    padding: 0 2% 2% 0;
+}
+
+.right {
+    float: right;
+    padding: 0 0 2% 2%;
 }
 
 /* home */
 
 #home-block {
+    width: 100%;
     font-size: 18px;
     margin: 5%;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 5%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
         "h-img1 hp1 hp1"
         "hp2 hp2 h-img2";
 }
 
-#home-img1 {
-    height: 350px;
+#home-img {
     grid-area: h-img1;
 }
 
 #home-img2 {
-    height: 350px;
     grid-area: h-img2;
 }
 
@@ -132,38 +144,32 @@ img {
     margin: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
     grid-template-areas:
-        "c-img1 cp1 cp1"
-        "cp2 cp2 c-img2"
-        "c-img3 cp3 cp3";
+        "cp1 cp1 cp1"
+        "cp2 cp2 cp2"
+        "cp3 cp3 cp3";
 }
 
 #cp1 {
     grid-area: cp1;
+    display: inline-block;
 }
 
 #cp2 {
     grid-area: cp2;
+    display: inline-block;
 }
 
 #cp3 {
     grid-area: cp3;
-}
-
-#cello-img1 {
-    height: 350px;
-    grid-area: c-img1;
-}
-
-#cello-img2 {
-    height: 350px;
-    grid-area: c-img2;
+    text-align: center;
 }
 
 #caption {
     font-size: 12px;
-    width: 400px;
     font-style: italic;
+    padding: 1%;
 }
 
 
@@ -174,6 +180,7 @@ img {
     margin: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
     grid-template-areas:
         "img1 lp1 lp1"
         "lp2 lp2 img2"
@@ -226,6 +233,7 @@ img {
     margin: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
     grid-template-areas:
         "ep1 ep1 ep1"
         "e-img ep2 ep2";
