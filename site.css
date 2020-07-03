@@ -2,10 +2,9 @@
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-
 .site-wrapper {
     max-height: 98%;
-    max-width: 90%;
+    max-width: 95%;
 }
 
 img {
@@ -53,6 +52,9 @@ h3 {
 
 hr {
     background-color: #AF9164;
+    height: 2px;
+    width: 100%;
+    margin: 0 3%;
 }
 
 /* navbar */
@@ -61,8 +63,8 @@ hr {
     background-color: black;
     display: inline-block;
     padding: 3%;
-    width: 100%;
-    margin: 3%;
+    width: 98%;
+    margin: 1%;
     text-align: justify;
 }
 
@@ -73,9 +75,9 @@ hr {
 .nav-link-wrapper {
     height: 30px;
     margin: auto;
-    font-size: 20px;
-    text-transform: uppercase;
+    font-size: 24px;
     letter-spacing: 3%;
+    font-variant: small-caps;
 }
 
 .nav-link-wrapper a {
@@ -190,6 +192,14 @@ a:hover {
 
 /* developer */
 
+.show-hide-button {
+    margin: 0 3%;
+}
+
+.icon {
+    height: 30px;
+    margin: 0 0 -0.5% 0;
+}
 
 
 /* footer */
