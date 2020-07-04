@@ -8,6 +8,12 @@
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
+.site-wrapper {
+    max-height: 98%;
+    max-width: 95%;
+}
+
+
 body{
     background-color: var(--chicagored);
 }
@@ -29,26 +35,22 @@ body{
 
 .nav-wrapper{
     background-color: var(--chicagoblue);
-    display: flex;
-	flex-direction: row;
-    padding: 30px;
+    display: inline-block;
+    padding: 3%;
+    width: 92%;
+    margin: 1%;
+    text-align: justify;
 }
 
-.left-side{
+.nav-links{
     display: flex;
-    margin: auto;
-}
-
-.nav-wrapper > .left-side > div {
-    margin: auto;
-    padding: 0px 40px;
-    font-size: 17px;
-    text-transform: uppercase;
-    letter-spacing: 8px;
 }
 
 .nav-link-wrapper {
     height: 30px;
+    margin: auto;
+    font-size: large;
+    text-transform: uppercase;
 }
 
 .nav-link-wrapper a {
