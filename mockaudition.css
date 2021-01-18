@@ -7,21 +7,6 @@
     max-width: 95%;
 }
 
-img {
-    max-height: 400px;
-    max-width: 400px;
-}
-
-.left {
-    float: left;
-    padding: 0 2% 2% 0;
-}
-
-.right {
-    float: right;
-    padding: 0 0 2% 2%;
-}
-
 h1 {
     font-size: 50px;
     text-align: center;
@@ -37,17 +22,23 @@ h3 {
     font-size: 25px;
 }
 
+a {
+    color: black;
+}
+
+button {
+    background: transparent;
+    border: none !important;
+    background-color: black;
+    color: white;
+    height: 34px;
+    border-radius: 34px;
+}
+
 .textblock {
     font-size: 18px;
     margin: 30px;
     margin-left: 80px
-}
-
-#caption {
-    width: 350px;
-    font-size: 13px;
-    font-style: italic;
-    padding: 0 1%;
 }
 
 hr {
@@ -57,17 +48,18 @@ hr {
     margin: 0 3%;
 }
 
+#number {
+    width: 30px;
+}
+
+/* Incrementor */
 
 .incrementButton {
 	margin: 10px;
 	margin-left: 0px;
 }
 
-.list {
-    display: inline-block;
-}
-
-#number {
+#youPick {
     width: 30px;
 }
 
@@ -77,7 +69,7 @@ hr {
     color: white;
 	margin: 0px;
 	width: 40px;
-	height: 20px;
+	height: 25px;
 	text-align: center;
 	vertical-align: middle;
 	user-select: none;
@@ -87,20 +79,18 @@ hr {
   cursor: pointer;
 }
 
-form #decrease {
+#decrease {
   margin-right: -4px;
   border-radius: 8px 0 0 8px;
 }
 
-form #increase {
+#increase {
   margin-left: -4px;
   border-radius: 0 8px 8px 0;
 }
 
 
 /* Toggle Switch */
-
-/* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
@@ -108,14 +98,12 @@ form #increase {
     height: 34px;
   }
   
-  /* Hide default HTML checkbox */
   .switch input {
     opacity: 0;
     width: 0;
     height: 0;
   }
   
-  /* The slider */
   .slider {
     position: absolute;
     cursor: pointer;
@@ -141,11 +129,11 @@ form #increase {
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: black;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px black;
   }
   
   input:checked + .slider:before {
@@ -163,156 +151,11 @@ form #increase {
     border-radius: 50%;
   }
 
-
-/* navbar */
-
-.nav-wrapper {
-    background-color: black;
-    display: inline-block;
-    padding: 3%;
-    width: 98%;
-    margin: 1%;
-    text-align: justify;
-}
-
-.nav-links {
-    display: flex;
-}
-
-.nav-link-wrapper {
-    height: 30px;
-    margin: auto;
-    font-size: 24px;
-    letter-spacing: 3%;
+#btnSubmit {
+    display: block;       
+    margin: 0 auto;
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
     font-variant: small-caps;
-}
-
-.nav-link-wrapper a {
-    color: #8a8a8a;
-    text-decoration: none;
-}
-
-.nav-link-wrapper a:hover {
-    color: white;
-}
-
-button {
-    background-color: black;
-    color: white;
-    border-radius: 25px;
-    height: 25px;
-    border: none !important;
-}
-
-button:hover {
-    background-color: #AF9164;
-}
-
-a {
-    color: #8a8a8a;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #271a6e;
-    text-decoration: none;
-}
-
-/* home */
-
-#home-block {
-    width: 100%;
-    font-size: 18px;
-    margin: 5%;
-    display: flex;
-    flex-direction: column;
-}
-
-#hp1 {
-    display: inline-block;
-}
-
-#hp2 {
-    display: inline-block;
-}
-
-/* cellist */
-
-#cellist-block {
-    font-size: 18px;
-    margin: 5%;
-    display: flex;
-    flex-direction: column;
-}
-
-#cp1 {
-    display: inline-block;
-}
-
-#cp2 {
-    display: inline-block;
-}
-
-#cp3 {
-    text-align: center;
-}
-
-
-/* librarian */
-
-#librarian-block {
-    font-size: 18px;
-    margin: 5%;
-    display: flex;
-    flex-direction: column;
-}
-
-#lp1 {
-    display: inline-block;
-}
-
-#lp2 {
-    display: inline-block;
-}
-
-#lp3 {
-    display: inline-block;
-}
-
-/* educator */
-
-.educator-block {
-    font-size: 18px;
-    margin: 5%;
-    display: flex;
-    flex-direction: column;
-}
-
-#ep2 {
-    display: inline-block;
-}
-
-#educator-img {
-    height: 350px;
-    grid-area: e-img;
-}
-
-/* developer */
-
-.show-hide-button {
-    margin: 0 3%;
-}
-
-.icon {
-    height: 30px;
-    margin: 0 0 -0.5% 0;
-}
-
-
-/* footer */
-
-.footer {
-    text-align: right;
-    font-size: 12px;
-    margin-bottom: 2%;
 }
