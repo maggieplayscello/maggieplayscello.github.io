@@ -1,0 +1,318 @@
+* {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.site-wrapper {
+    max-height: 98%;
+    max-width: 95%;
+}
+
+img {
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.left {
+    float: left;
+    padding: 0 2% 2% 0;
+}
+
+.right {
+    float: right;
+    padding: 0 0 2% 2%;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+h2 {
+    font-size: 30px;
+    font-variant: small-caps;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.textblock {
+    font-size: 18px;
+    margin: 30px;
+    margin-left: 80px
+}
+
+#caption {
+    width: 350px;
+    font-size: 13px;
+    font-style: italic;
+    padding: 0 1%;
+}
+
+hr {
+    background-color: #AF9164;
+    height: 2px;
+    width: 100%;
+    margin: 0 3%;
+}
+
+
+.incrementButton {
+	margin: 10px;
+	margin-left: 0px;
+}
+
+.list {
+    display: inline-block;
+}
+
+#number {
+    width: 30px;
+}
+
+.value-button {
+	display: inline-block;
+    background-color: black;
+    color: white;
+	margin: 0px;
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	user-select: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+
+/* Toggle Switch */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+/* navbar */
+
+.nav-wrapper {
+    background-color: black;
+    display: inline-block;
+    padding: 3%;
+    width: 98%;
+    margin: 1%;
+    text-align: justify;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link-wrapper {
+    height: 30px;
+    margin: auto;
+    font-size: 24px;
+    letter-spacing: 3%;
+    font-variant: small-caps;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+.nav-link-wrapper a:hover {
+    color: white;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    height: 25px;
+    border: none !important;
+}
+
+button:hover {
+    background-color: #AF9164;
+}
+
+a {
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #271a6e;
+    text-decoration: none;
+}
+
+/* home */
+
+#home-block {
+    width: 100%;
+    font-size: 18px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#hp1 {
+    display: inline-block;
+}
+
+#hp2 {
+    display: inline-block;
+}
+
+/* cellist */
+
+#cellist-block {
+    font-size: 18px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#cp1 {
+    display: inline-block;
+}
+
+#cp2 {
+    display: inline-block;
+}
+
+#cp3 {
+    text-align: center;
+}
+
+
+/* librarian */
+
+#librarian-block {
+    font-size: 18px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#lp1 {
+    display: inline-block;
+}
+
+#lp2 {
+    display: inline-block;
+}
+
+#lp3 {
+    display: inline-block;
+}
+
+/* educator */
+
+.educator-block {
+    font-size: 18px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+#ep2 {
+    display: inline-block;
+}
+
+#educator-img {
+    height: 350px;
+    grid-area: e-img;
+}
+
+/* developer */
+
+.show-hide-button {
+    margin: 0 3%;
+}
+
+.icon {
+    height: 30px;
+    margin: 0 0 -0.5% 0;
+}
+
+
+/* footer */
+
+.footer {
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 2%;
+}
