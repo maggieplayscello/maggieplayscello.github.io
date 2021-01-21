@@ -2,18 +2,24 @@
 <html>
 
 <script>
+
+    var excerptTotal = 0;
+
     function addField() {
         var field = document.createElement("input");
         field.type = "text";
         field.value = "";
         field.placeholder="Add excerpt nickname";
         document.getElementById("after").appendChild(field);
+        const lineBreak = document.createElement('br');
+        document.getElementById("after").appendChild(lineBreak);
+        excerptTotal++;
     }
 
     function increaseValue() {
 		var value = parseInt(document.getElementById('youPick').value, 10);
 		value = isNaN(value) ? 0 : value;
-		value > 30 ? value = 30 : '';
+		value > excerptTotal ? value = excerptTotal : '';
 		value++;
 		document.getElementById('youPick').value = value;
 	}
@@ -35,14 +41,16 @@
     <div class="site-wrapper">
         <h1 id="top">Mock Audition Helper </h1>
         <div class="textblock">
-            This is an excerpt randomization tool. Please 
-            <a href="mailto:maggieplayscello@gmail.com"> let me know</a> if you'd like to see additional options added in the future!
+            This is a practice tool to give a list of excerpts, pieces, students, etc in a random order and with a some options to make it a little 
+            more interesting! Improvements and additional features to come, but please <a href="mailto:maggieplayscello@gmail.com"> let me know</a> 
+            if you have ideas or if you find it useful!
         </div>
 
-        <div class="textblock" display="inline-block">
+        <div class="textblock" display="block">
             <h2 id="list">Add an excerpt to the list:<br></h2>
                 <input type="text" name="excerpt" id="excerpt" placeholder="Add excerpt nickname">
-                <button onclick="addField()">Add Another</button>
+                <button onclick="addField()" onclick="addTotal()"> + Add Another </button><br>
+                <input type="text" name="excerpt" id="excerpt" placeholder="Add excerpt nickname">
                 <div id="after"></div>
         </div>
         
@@ -53,20 +61,22 @@
                 <input type="radio" name="test" value="value3" class="incrementButton">
 				    <label for="score">Pick </label> 
 				    <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-					    <input type="number" name="youPick" id="youPick" value="2" />
+					    <input type="number" name="youPick" id="youPick" value="1" />
  				    <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
                 </div>
         </div>
             
         <div class="textblock">
-            <h2>Enable mad libs mode?</h2>
+            <h2>Enable mad libs mode?
+                <span class="tooltip" data-tooltip='"Could you play it again, but this time __________?"'>?</span>
+            </h2>
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
               </label>
         </div>
 
-        <button type="submit" id="btnSubmit">Let's Go!</button>
+        <button type="submit" id="btnSubmit"> Let's Go! </button>
         
 
 
