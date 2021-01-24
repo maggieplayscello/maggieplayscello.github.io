@@ -4,17 +4,20 @@
 <script>
 
     var excerptTotal = 0;
+    var excerptIdNum = 3;
+    var excerptList = [];
 
     function addField() {
         var field = document.createElement("input");
         field.type = "text";
         field.value = "";
+        field.id = "excerpt" + (excerptIdNum++);
         field.placeholder="Add excerpt nickname";
-        document.getElementById("after").appendChild(field);
         const lineBreak = document.createElement('br');
+        document.getElementById("after").appendChild(field);
         document.getElementById("after").appendChild(lineBreak);
         excerptTotal++;
-    }
+    };
 
     function increaseValue() {
 		var value = parseInt(document.getElementById('youPick').value, 10);
@@ -30,6 +33,20 @@
 		value--;
 		document.getElementById('youPick').value = value;
 	};
+
+    function letsGo() {
+        var elements = document.getElementsByTagName("*");
+        var ul = document.getElementById("sorted");
+        for (var i = 0; i < elements.length - 1; i++) {
+            if (elements[i].id && elements[i].id.indexOf("excerpt") != -1) {
+                excerptList.push(elements[i].value);
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(elements[i].value));                
+                ul.appendChild(li);
+            }
+        }
+        document.getElementById("excerptsSorted").scrollIntoView({behavior: 'smooth'});
+    }
 </script>
 
 <head>
@@ -48,9 +65,9 @@
 
         <div class="textblock" display="block">
             <h2 id="list">Add an excerpt to the list:<br></h2>
-                <input type="text" name="excerpt" id="excerpt" placeholder="Add excerpt nickname">
+                <input type="text" name="excerpt" id="excerpt1" placeholder="Add excerpt nickname">
                 <button onclick="addField()" onclick="addTotal()"> + Add Another </button><br>
-                <input type="text" name="excerpt" id="excerpt" placeholder="Add excerpt nickname">
+                <input type="text" name="excerpt" id="excerpt2" placeholder="Add excerpt nickname">
                 <div id="after"></div>
         </div>
         
@@ -76,9 +93,12 @@
               </label>
         </div>
 
-        <button type="submit" id="btnSubmit"> Let's Go! </button>
+        <button type="submit" id="btnSubmit" onclick="letsGo()"> Let's Go! </button>
+        <br><br><br><br><br><br><br><br>
         
-
+        <div id="excerptsSorted">
+            <ul id="sorted"></ul>
+        </div>
 
 
 <!-- footer and end tags-->
