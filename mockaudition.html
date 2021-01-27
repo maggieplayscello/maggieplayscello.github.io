@@ -34,6 +34,15 @@
 		document.getElementById('youPick').value = value;
 	};
 
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    };
+
     function letsGo() {
         var elements = document.getElementsByTagName("*");
         var ul = document.getElementById("sorted");
@@ -45,7 +54,7 @@
                 ul.appendChild(li);
             }
         }
-        document.getElementById("excerptsSorted").scrollIntoView({behavior: 'smooth'});
+        document.getElementById("listSorted").scrollIntoView({behavior: 'smooth'});
     }
 </script>
 
@@ -94,12 +103,14 @@
         </div>
 
         <button type="submit" id="btnSubmit" onclick="letsGo()"> Let's Go! </button>
+
         <br><br><br><br><br><br><br><br>
         
-        <div id="excerptsSorted">
+        <div id="listSorted">
             <ul id="sorted"></ul>
         </div>
 
+        <br><br><br><br><br><br><br><br>
 
 <!-- footer and end tags-->
 <br><br><br>
