@@ -6,7 +6,6 @@
     var excerptTotal = 0;
     var excerptIdNum = 3;
 
-
     function addField() {
         var field = document.createElement("input");
         field.type = "text";
@@ -35,19 +34,39 @@
 	};
 
     function letsGo() {
+        var div = document.getElementById("sorted");
+        while(div.firstChild){
+            div.removeChild(div.firstChild);
+        }
         var excerptList = [];
         var elements = document.getElementsByTagName("*");
         var ul = document.getElementById("sorted");
+        var choice = "";
         for (var i = 0; i < elements.length - 1; i++) {
             if (elements[i].id && elements[i].id.indexOf("excerpt") != -1) {
                 excerptList.push(elements[i].value);               
             }
         }
         excerptList = excerptList.sort(() => Math.random() - 0.5); 
-        for (i = 0; i < excerptList.length; i++) {
+
+        if (document.getElementById("all").checked) {
+            for (i = 0; i < excerptList.length; i++) {
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(excerptList[i]));                
+                ul.appendChild(li);
+            }
+        } else if (document.getElementById("one").checked) {
+            var int = Math.floor(Math.random() * excerptList.length);
             var li = document.createElement("li");
-            li.appendChild(document.createTextNode(excerptList[i]));                
+            li.appendChild(document.createTextNode(excerptList[int]));                
             ul.appendChild(li);
+        } else if (document.getElementById("pick").checked) {
+            var pickNum = (document.getElementById('youPick').value);
+            for (i = 0; i < pickNum; i++) {
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(excerptList[i]));                
+                ul.appendChild(li);
+            }
         }
         document.getElementById("listSorted").scrollIntoView({behavior: 'smooth'});
     }
@@ -78,16 +97,16 @@
         
         <div class="textblock">
             <h2>Select:</h2> 
-                <input type="radio" name="test" value="value1"> Give me the full list <br>
-                <input type="radio" name="test" value="value2"> One at a time <br>
-                <input type="radio" name="test" value="value3" class="incrementButton">
+                <input type="radio" name="test" id="all" checked> Give me the full list <br>
+                <input type="radio" name="test" id="one"> One at a time <br>
+                <input type="radio" name="test" id="pick" class="incrementButton">
 				    <label for="score">Pick </label> 
 				    <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
 					    <input type="number" name="youPick" id="youPick" value="1" />
  				    <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
                 </div>
         </div>
-            
+<!--            
         <div class="textblock">
             <h2>Enable mad libs mode?
                 <span class="tooltip" data-tooltip='"Could you play it again, but this time __________?"'>?</span>
@@ -97,7 +116,7 @@
                 <span class="slider round"></span>
               </label>
         </div>
-
+-->
         <button type="submit" id="btnSubmit" onclick="letsGo()"> Let's Go! </button>
 
         <br><br><br><br><br><br><br><br>
@@ -106,7 +125,6 @@
             <ul id="sorted"></ul>
         </div>
 
-        <ul id="shuffled"></ul>
         <br><br><br><br><br><br><br><br>
 
 <!-- footer and end tags-->
