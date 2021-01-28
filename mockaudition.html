@@ -5,7 +5,7 @@
 
     var excerptTotal = 0;
     var excerptIdNum = 3;
-    var excerptList = [];
+
 
     function addField() {
         var field = document.createElement("input");
@@ -34,28 +34,24 @@
 		document.getElementById('youPick').value = value;
 	};
 
-    function shuffleArray(array) {
-        for (var i = array.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-    };
-
     function letsGo() {
+        var excerptList = [];
         var elements = document.getElementsByTagName("*");
         var ul = document.getElementById("sorted");
         for (var i = 0; i < elements.length - 1; i++) {
             if (elements[i].id && elements[i].id.indexOf("excerpt") != -1) {
-                excerptList.push(elements[i].value);
-                var li = document.createElement("li");
-                li.appendChild(document.createTextNode(elements[i].value));                
-                ul.appendChild(li);
+                excerptList.push(elements[i].value);               
             }
+        }
+        excerptList = excerptList.sort(() => Math.random() - 0.5); 
+        for (i = 0; i < excerptList.length; i++) {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(excerptList[i]));                
+            ul.appendChild(li);
         }
         document.getElementById("listSorted").scrollIntoView({behavior: 'smooth'});
     }
+
 </script>
 
 <head>
@@ -110,6 +106,7 @@
             <ul id="sorted"></ul>
         </div>
 
+        <ul id="shuffled"></ul>
         <br><br><br><br><br><br><br><br>
 
 <!-- footer and end tags-->
