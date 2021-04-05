@@ -55,11 +55,13 @@
                 li.appendChild(document.createTextNode(excerptList[i]));                
                 ul.appendChild(li);
             }
+
         } else if (document.getElementById("one").checked) {
             var int = Math.floor(Math.random() * excerptList.length);
             var li = document.createElement("li");
             li.appendChild(document.createTextNode(excerptList[int]));                
             ul.appendChild(li);
+
         } else if (document.getElementById("pick").checked) {
             var pickNum = (document.getElementById('youPick').value);
             for (i = 0; i < pickNum; i++) {
@@ -118,14 +120,12 @@
         </div>
 -->
         <button type="submit" id="btnSubmit" onclick="letsGo()"> Let's Go! </button>
-
-        <br><br><br><br><br><br><br><br>
         
         <div id="listSorted">
             <ul id="sorted"></ul>
         </div>
 
-        <br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
 
 <!-- footer and end tags-->
 <br><br><br>
